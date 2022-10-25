@@ -36,3 +36,16 @@ https://blog.mastykarz.nl/debug-production-version-sharepoint-framework-solution
 ```
 
 Congrats, your .sppkg now has source maps 🥳
+
+
+# Bonus: SPUpload.ps1
+Helper script which does the `clean`,`bundle`,`package-solution`, `insertSourceMaps` and uploads the .sppkg with a single command
+
+## installation
+* Download [SPUpload.ps1](https://gist.github.com/damsleth/f28ab2f4dc79f180d84549b3d241fa44)
+* Open your $PROFILE folder in powershell: `code $PROFILE/..`
+* Add `SPUpload.ps1` to the $PROFILE folder
+* Reference SPUpload in your Microsoft.Powershell_profile.ps1 and Microsoft.VSCode_profile.ps1: `"$PSScriptRoot/SPUpload.ps1"`
+* Restart your powershell session
+* Do the whole bundling, packaging, source map generation and upload dance using `SPUpload -Tenant [yourtenantname]`
+* You now have the SPFx pacakge in your tenant app catalog with source maps 🕺
